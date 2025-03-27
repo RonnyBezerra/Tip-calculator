@@ -9,6 +9,7 @@
 
 :root {
     font-size: 62.5%;
+    
     --jagged-ice: #c5e4e7;
     --white: #FFF;
     --greyish-turquoise: #5E7A7D;
@@ -36,10 +37,15 @@ main {
     background: var(--white);
     padding: 3.2rem 2.4rem;
     border-radius: 2.5rem 2.5rem 0 0;
+    max-width:92rem;
 }
 
 .info {
     padding-inline: .8rem;
+
+    div {
+        margin-bottom:3.2rem;
+    }
 
     strong {
         color: var(--greyish-turquoise);
@@ -63,12 +69,13 @@ main {
             font-weight: 700;
             outline: none;
             color: var(--sherpa-blue);
-        }
+            
 
         input::placeholder {
             color: var(--sherpa-blue);
             opacity: 0.35;
         }
+    }
     }
 
     .input-box:has(input:focus) {
@@ -106,10 +113,16 @@ main {
             color: var(--bettle-green);
         }
 
-        input::focus {
+        input:focus {
             outline: 2px solid var(--topaz);
         }
     }
+
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
 }
 
 .results {
@@ -150,5 +163,23 @@ main {
         font-size: 2rem;
         color: var(--sherpa-blue);
         font-weight: 700;
+    }
+ }
+
+@media(min-width: 920px) {
+    main {
+        display: flex;
+        margin-inline: auto;
+        gap: 4.8rem;
+        padding: 4.8rem;
+        border-radius: 2.5rem;
+
+        section {
+            width: 100%;
+        }
+
+        .tip div {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
