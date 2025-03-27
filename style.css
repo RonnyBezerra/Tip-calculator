@@ -99,6 +99,10 @@ main {
             background: var(--sherpa-blue);
         }
 
+        .button-selected {
+            background-color: var(--topaz);
+        }
+
         input {
             width: 100%;
             font-size: 2.4rem;
