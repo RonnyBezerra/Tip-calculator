@@ -9,7 +9,7 @@ billInput.addEventListener("input", receiveBillValue)
 let numberOfPeopleInput = document.querySelector("#people")
 numberOfPeopleInput.addEventListener("input", receiveNumberOfPeopleValue)
 
-function receiveBillValue () {
+function receiveBillValue() {
     bill = billInput.valueAsNumber
 
     calculate()
@@ -34,7 +34,7 @@ function receiveTipPercentageValue(value) {
     calculate()
 }
 
-function receiveCustomTipPercentage() {
+function receiveCustomTipPercentageValue() {
     tipPercentage = document.querySelector("#custom-tip").valueAsNumber / 100
 
     removeClassButtonSelected()
